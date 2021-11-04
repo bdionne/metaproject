@@ -142,6 +142,11 @@ public final class Operations {
     public static final Operation REMOVE_ONTOLOGY_ANNOTATION = factory.getSystemOperation(
             factory.getOperationId("remove-ontology-annotation"), factory.getName("Remove ontology annotation"),
             factory.getDescription("Remove an annotation from the ontology"), OperationType.WRITE, Operation.Scope.ONTOLOGY);
+    
+ // Remove ontology annotation
+    public static final Operation REPLACE_ONTOLGY_PREF_MAP = factory.getSystemOperation(
+            factory.getOperationId("replace-ontology-pref-map"), factory.getName("Replace ontology prefix map"),
+            factory.getDescription("Remplace prefix mapping with new one"), OperationType.WRITE, Operation.Scope.ONTOLOGY);
 
     // Add import
     public static final Operation ADD_IMPORT = factory.getSystemOperation(
