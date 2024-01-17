@@ -19,6 +19,7 @@ public interface PolicyFactory {
      * Create a new project
      *
      * @param projectId Project identifier
+     * @param namespace String
      * @param name  Project name
      * @param description   Project description
      * @param ownerId   Project owner user identifier

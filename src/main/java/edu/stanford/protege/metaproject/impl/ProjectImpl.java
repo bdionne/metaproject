@@ -36,6 +36,7 @@ public final class ProjectImpl implements Project, Serializable {
      * Constructor
      *
      * @param id Project identifier
+     * @param namespace String
      * @param name   Project name
      * @param description    Project description
      * @param owner Owner of the project

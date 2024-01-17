@@ -3,10 +3,12 @@ package edu.stanford.protege.metaproject;
 import edu.stanford.protege.metaproject.api.ConfigurationLoader;
 import edu.stanford.protege.metaproject.api.ConfigurationWriter;
 import edu.stanford.protege.metaproject.api.PolicyFactory;
+import edu.stanford.protege.metaproject.api.ProjectOptionsLoader;
 import edu.stanford.protege.metaproject.api.Serializer;
 import edu.stanford.protege.metaproject.impl.ConfigurationLoaderImpl;
 import edu.stanford.protege.metaproject.impl.ConfigurationWriterImpl;
 import edu.stanford.protege.metaproject.impl.PolicyFactoryImpl;
+import edu.stanford.protege.metaproject.impl.ProjectOptionsLoaderImpl;
 import edu.stanford.protege.metaproject.serialization.DefaultJsonSerializer;
 
 import javax.annotation.concurrent.Immutable;
@@ -55,5 +57,14 @@ public final class ConfigurationManager {
      */
     public static ConfigurationWriter getConfigurationWriter() {
         return new ConfigurationWriterImpl(getSerializer());
+    }
+    
+    /**
+     * Get the project options loader
+     *
+     * @return ProjectOptions loader
+     */
+    public static ProjectOptionsLoader getProjectOptionsLoader() {
+        return new ProjectOptionsLoaderImpl(getSerializer());
     }
 }
